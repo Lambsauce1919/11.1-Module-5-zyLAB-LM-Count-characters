@@ -11,17 +11,15 @@
 	      int count = 0;
 	      // scans for user input and assigns it to String vars
 	      uInputLetter = scnr.next();
-	      uInputSentence = scnr.next();
+	      uInputSentence = scnr.nextLine();
 	      
-	      char targetChar = uInputSentence.charAt(0);
+	      char targetChar = uInputLetter.charAt(0); // used to find how many times the letter in uInputLetter is found in the sentence
 	      for (i = 0; i < uInputSentence.length(); i++) { // loop statement that runs until all the characters in the input statement have been ran.
 	    	  
 	    	  if (Character.toLowerCase(uInputSentence.charAt(i)) == Character.toLowerCase(targetChar)) { // this compares the sentence character to the target character, while also ignoring case as an added bonus
 	    		  count++;
 	    	  }
-	    	  else {
-	    		  count = 0; // if nothing is counted, it sets count to zero so that it can be called corrected in the last else if statement
-	    	  }
+	    	  
 	      }
 	      
 	      // series of if statements that produce different out print statements depending on the count value
@@ -37,4 +35,3 @@
 	   }
 	}
 
- 
